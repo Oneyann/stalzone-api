@@ -1,5 +1,13 @@
 # stalzone-api
 
+[![Python](https://img.shields.io/pypi/pyversions/stalzone-api?logo=python&logoColor=white)](https://pypi.org/project/stalzone-api/)
+[![PyPI](https://img.shields.io/pypi/v/stalzone-api?logo=pypi&color=0f766e)](https://pypi.org/project/stalzone-api/)
+[![License](https://img.shields.io/pypi/l/stalzone-api)](LICENSE)
+[![codecov](https://codecov.io/gh/Oneyann/stalzone-api/branch/main/graph/badge.svg)](https://codecov.io/gh/Oneyann/stalzone-api)
+[![Issues](https://img.shields.io/github/issues/Oneyann/stalzone-api)](https://github.com/Oneyann/stalzone-api/issues)
+[![Docs](https://img.shields.io/badge/docs-Zensical-0f766e)](docs/index.md)
+[![Tests](https://github.com/Oneyann/stalzone-api/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/Oneyann/stalzone-api/actions/workflows/tests.yml)
+
 The simplest Python client for the **Stalzone API** (Stalcraft) and the official
 **items database**. One import, one client, no boilerplate.
 

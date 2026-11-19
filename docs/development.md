@@ -46,6 +46,11 @@ python -m pytest -m integration
 Do not enable live tests in an environment where requests to the public API
 are not intended.
 
+The GitHub Actions workflow runs the test suite on Python 3.10–3.13 and
+generates a coverage report. To publish coverage to Codecov, add a
+`CODECOV_TOKEN` repository secret in GitHub. Coverage upload is non-blocking:
+it will not fail the test job if Codecov is not configured.
+
 ## Project layout
 
 ```text
