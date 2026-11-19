@@ -164,7 +164,9 @@ python -m pytest -m integration
 
 ## Documentation
 
-The detailed guides are in [`docs/`](docs/index.md):
+The detailed guides are in [`docs/`](docs/index.md). A searchable,
+light/dark-themed site can be previewed locally with
+`python -m pip install -e ".[docs]"` followed by `python -m mkdocs serve`.
 
 * [Installation and supported Python versions](docs/installation.md)
 * [Clients and API endpoint reference](docs/clients-and-api.md)

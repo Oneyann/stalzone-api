@@ -1,0 +1,74 @@
+site_name: stalzone-api
+site_description: Typed Python clients for the Stalzone API and Stalcraft item database
+repo_name: Oneyann/stalzone-api
+repo_url: https://github.com/Oneyann/stalzone-api
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Get started:
+      - Installation: installation.md
+      - Clients and API: clients-and-api.md
+  - Guides:
+      - Authentication: authentication.md
+      - Item database: database.md
+      - Models and errors: models-and-errors.md
+  - Project:
+      - Code analysis: analysis.md
+      - Development: development.md
+      - Changelog: changelog.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright &copy; stalzone-api contributors · MIT License

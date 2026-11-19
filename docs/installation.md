@@ -19,8 +19,15 @@ Install from a source checkout with test dependencies:
 python -m pip install -e ".[test]"
 ```
 
-The optional `gui` extra installs PySide6 for applications that integrate the
-library with Qt. The core API client and item database do not require Qt.
+Optional extras:
+
+```console
+python -m pip install "stalzone-api[gui]"   # PySide6 for Qt integrations
+python -m pip install -e ".[docs]"           # MkDocs Material documentation tooling
+```
+
+The core API client and item database do not require Qt or the documentation
+toolchain.
 
 ## Verify the installation
 
