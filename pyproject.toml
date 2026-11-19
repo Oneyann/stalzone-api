@@ -32,7 +32,7 @@ Issues = "https://github.com/Oneyann/stalzone-api/issues"
 [project.optional-dependencies]
 test = ["pytest>=8", "pytest-asyncio>=0.24"]
 gui = ["PySide6>=6.6"]
-docs = ["mkdocs-material>=9.5"]
+docs = ["zensical>=0.1.2"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/stalzone_api"]

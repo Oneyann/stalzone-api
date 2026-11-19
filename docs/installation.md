@@ -23,7 +23,7 @@ Optional extras:
 
 ```console
 python -m pip install "stalzone-api[gui]"   # PySide6 for Qt integrations
-python -m pip install -e ".[docs]"           # MkDocs Material documentation tooling
+python -m pip install -e ".[docs]"           # Zensical documentation tooling
 ```
 
 The core API client and item database do not require Qt or the documentation

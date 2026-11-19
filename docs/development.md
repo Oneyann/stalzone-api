@@ -19,14 +19,14 @@ Install the documentation theme and preview the site locally:
 
 ```console
 python -m pip install -e ".[docs]"
-python -m mkdocs serve
+zensical serve
 ```
 
 The preview is served locally and refreshes as Markdown or style files change.
 Build the static site and validate its links before publishing:
 
 ```console
-python -m mkdocs build --strict
+zensical build --strict
 ```
 
 ## Tests
@@ -62,7 +62,8 @@ docs/                 User and developer documentation
 
 The package uses a `src` layout and Hatchling build backend. `pyproject.toml`
 declares Python 3.10+, `httpx>=0.27`, and the `test`, `gui`, and `docs`
-optional dependency groups.
+optional dependency groups. The docs extra provides Zensical, which reads the
+project's MkDocs-compatible `mkdocs.yml` configuration.
 
 ## Build and inspect distributions
 
