@@ -3,6 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://pypi.org/project/stalzone-api/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Tests](https://github.com/Oneyann/stalzone-api/actions/workflows/tests.yml/badge.svg)](https://github.com/Oneyann/stalzone-api/actions/workflows/tests.yml)
+[![Issues](https://img.shields.io/github/issues/Oneyann/stalzone-api)](https://github.com/Oneyann/stalzone-api/issues)
 
 Асинхронный Python-клиент для API Stalzone (Stalcraft). Один импорт, один клиент.
 
