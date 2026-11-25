@@ -1,0 +1,5 @@
+site_name: stalzone-api
+site_description: Асинхронный Python-клиент для API Stalzone (Stalcraft)
+repo_url: https://github.com/Oneyann/stalzone-api
+nav:
+  - Главная: index.md
