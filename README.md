@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://pypi.org/project/stalzone-api/)
 
-Асинхронный Python-клиент для API Stalzone (Stalcraft).
+Асинхронный Python-клиент для API Stalzone (Stalcraft). Один импорт, один клиент.
 
 ```bash
 pip install stalzone-api
@@ -23,6 +23,25 @@ async def main():
 asyncio.run(main())
 ```
 
+## Методы
+
+| Метод | Назначение |
+| --- | --- |
+| `regions()` | Список регионов |
+| `emission()` | Текущий выброс |
+| `profile(name, uuid=False)` | Профиль игрока по нику или UUID |
+| `characters()` | Персонажи пользователя (нужен токен) |
+| `friends(name)` | Друзья игрока (нужен токен) |
+| `clans(limit=...)` | Список кланов |
+| `clan(clan_id)` | Информация о клане |
+| `clan_members(clan_id)` | Участники клана (нужен токен) |
+| `sessions(map=...)` | Игровые сессии |
+| `auction(item_id).lots(...)` | Лоты аукциона |
+| `auction(item_id).history(...)` | История аукциона |
+| `request(method, path)` | Любая конечная точка API |
+
+Регион по умолчанию — `RU`. Чтобы сменить, передайте `region="EU"` или `Region.EU`.
+
 ## Авторизация
 
 | Переменная | Назначение |
@@ -31,28 +50,7 @@ asyncio.run(main())
 | `STALZONE_APP_SECRET` | Секрет приложения (`Client-Secret`) |
 | `STALZONE_ACCESS_TOKEN` | Готовый токен, приоритетнее ID и секрета |
 
-Можно передать явно: `AppClient(client_id=1454, client_secret="…")` или `AppClient(token="…")`.
 Если учётные данные не заданы, используется публичный демо-сервер. Принудительно: `AppClient(demo=True)`.
-
-## Методы
-
-```python
-await client.regions()
-await client.emission()
-await client.profile("ZIV")
-await client.characters()
-await client.friends("ZIV")
-await client.clans(limit=20)
-await client.clan(clan_id)
-await client.clan_members(clan_id)
-await client.sessions(map="operation_bigcleanup")
-await client.auction("y1q9").lots(limit=20, sort="current_price", order="asc")
-await client.auction("y1q9").history(limit=50)
-await client.request("GET", "RU/emission")
-```
-
-Регион по умолчанию — `RU`. Чтобы сменить, передайте `region="EU"` или `Region.EU`.
-Методы `characters`, `friends` и `clan_members` требуют токен пользователя.
 
 ## Токен пользователя (OAuth)
 
@@ -65,6 +63,8 @@ token = await oauth.exchange_code(code)
 client = AppClient(token=token.access_token)
 ```
 
-Ошибки наследуют `StalzoneError`: `NotFound`, `Unauthorized`, `RateLimited`, `TransportError` и другие.
+## Примечания
+
+- Ошибки наследуют `StalzoneError`: `NotFound`, `Unauthorized`, `RateLimited`, `TransportError` и другие.
 
 Неофициальная библиотека. Stalcraft и Stalzone принадлежат EXBO.
