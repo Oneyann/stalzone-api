@@ -1,6 +1,7 @@
 # stalzone-api
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://pypi.org/project/stalzone-api/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 Асинхронный Python-клиент для API Stalzone (Stalcraft). Один импорт, один клиент.
 
@@ -61,6 +62,12 @@ oauth = OAuth(client_id=1454, client_secret="…", redirect_uri="https://example
 print(oauth.authorize_url(state="xyz"))
 token = await oauth.exchange_code(code)
 client = AppClient(token=token.access_token)
+```
+
+## Тесты
+
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
 ## Примечания
